@@ -1,5 +1,4 @@
 {
-  
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -18,5 +17,5 @@
   "cSpell.words": ["allroadmaps", "commitlint", "haspopup", "tailwindcss"],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }
 }
