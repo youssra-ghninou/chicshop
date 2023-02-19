@@ -10,6 +10,9 @@
     "source.fixAll.eslint": true,
     "source.fixAll.format": true
   },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
   "eslint.workingDirectories": [{ "mode": "auto" }],
   "files.encoding": "utf8",
   "cSpell.language": "en,lorem",

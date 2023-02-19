@@ -1,8 +1,8 @@
+import Menu from '@/components/Menu'
 import Providers from '@/components/Providers'
 import ThemeSwitch from '@/components/ThemeChangerButton'
 import { Inter } from '@next/font/google'
 import { ServerThemeProvider } from 'next-themes'
-import Menu from '../components/Menu'
 import './globals.css'
 
 const inter = Inter({
