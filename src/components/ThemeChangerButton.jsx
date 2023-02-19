@@ -1,26 +1,31 @@
 'use client'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 const ThemeSwitch = () => {
-  const [mounted, setMounted] = useState(false)
+  const [isDarkMode, setDarkMode] = useState(false)
+
   const { theme, setTheme } = useTheme()
 
-  // useEffect only runs on the client, so now we can safely show the UI
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked)
   }
 
   return (
-    <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-      <option value='system'>System</option>
-      <option value='dark'>Dark</option>
-      <option value='light'>Light</option>
-    </select>
+    <>
+      <div>
+        The current theme is: {theme}
+        <button onClick={() => setTheme('light')}>Light Mode</button>
+        <button onClick={() => setTheme('dark')}>Dark Mode</button>
+      </div>
+      <DarkModeSwitch
+        style={{ marginBottom: '2rem' }}
+        checked={isDarkMode}
+        onClick={() => setTheme('light')}
+        size={120}
+      />
+    </>
   )
 }
 

@@ -9,5 +9,9 @@ import { ThemeProvider } from 'next-themes'
 // * on both the server-side and the client-side.
 
 export default function Providers({ children }) {
-  return <ThemeProvider attribute='class'>{children}</ThemeProvider>
+  return (
+    <ThemeProvider storageKey='preferred-theme' attribute='class'>
+      {children}
+    </ThemeProvider>
+  )
 }
