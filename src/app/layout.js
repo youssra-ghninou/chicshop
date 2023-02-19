@@ -1,5 +1,8 @@
+import Providers from '@/components/Providers'
+import ThemeSwitch from '@/components/ThemeChangerButton'
 import { Inter } from '@next/font/google'
-import Menu from './(components)/menu'
+import { ServerThemeProvider } from 'next-themes'
+import Menu from '../components/Menu'
 import './globals.css'
 
 const inter = Inter({
@@ -10,18 +13,22 @@ const inter = Inter({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' className={`${inter.variable}`}>
-      {/*
+    // the use of </ServerThemeProvider> resolve the hydration error
+    <ServerThemeProvider attribute='class'>
+      <html lang='en' className={`${inter.variable}`}>
+        {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
-      <body>
-        <div className='flex justify-around'>
-          <Menu />
-        </div>
-        {children}
-      </body>
-    </html>
+        <head />
+        <body>
+          <Providers>
+            <Menu />
+            <ThemeSwitch />
+            {children}
+          </Providers>
+        </body>
+      </html>
+    </ServerThemeProvider>
   )
 }

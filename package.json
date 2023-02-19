@@ -21,6 +21,7 @@
     "eslint-config-prettier": "^8.6.0",
     "husky": "^8.0.3",
     "next": "13.1.6",
+    "next-themes": "npm:@wits/next-themes@^0.2.16",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
