@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu'
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false)
   return (
-    <>
+    <div className='lg:hidden'>
       {showSidebar ? (
         <button
           className='fixed left-0 top-0 z-50 flex cursor-pointer items-center text-3xl text-Adark'
@@ -29,7 +29,7 @@ const Sidebar = () => {
       >
         <MobileMenu />
       </div>
-    </>
+    </div>
   )
 }
 
