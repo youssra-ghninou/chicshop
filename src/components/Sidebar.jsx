@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
-import MobileMenu from './MobileMenu'
+import MobileSideMenu from './MobileSideMenu'
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false)
@@ -27,7 +27,7 @@ const Sidebar = () => {
           !showSidebar ? 'translate-x-0 ' : 'translate-x-full'
         }`}
       >
-        <MobileMenu />
+        <MobileSideMenu />
       </div>
     </div>
   )

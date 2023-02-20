@@ -11,7 +11,7 @@ import { TbWorld } from 'react-icons/tb'
 import { uid } from 'uid'
 import ThemeSwitch from './ThemeChangerButton'
 
-const MobileMenu = () => {
+const MobileSideMenu = () => {
   const navitems = [
     {
       name: 'Home',
@@ -94,4 +94,4 @@ const MobileMenu = () => {
   )
 }
 
-export default MobileMenu
+export default MobileSideMenu

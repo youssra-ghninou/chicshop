@@ -1,5 +1,4 @@
 import Providers from '@/components/Providers'
-import Sidebar from '@/components/Sidebar'
 import { Inter } from '@next/font/google'
 import { ServerThemeProvider } from 'next-themes'
 import './globals.css'
@@ -21,10 +20,7 @@ export default function RootLayout({ children }) {
       */}
         <head />
         <body>
-          <Providers>
-            <Sidebar />
-            {children}
-          </Providers>
+          <Providers>{children}</Providers>
         </body>
       </html>
     </ServerThemeProvider>

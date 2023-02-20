@@ -1,5 +1,9 @@
+import GoBack from '@/components/GoBack'
+
 export default function Products() {
   return (
-    <main className='font-bold text-green-600'>This is the Category page</main>
+    <main className='text-Adark'>
+      <GoBack />
+    </main>
   )
 }
