@@ -67,7 +67,7 @@ const MobileMenu = () => {
   return (
     <>
       <div className='flex flex-col items-center justify-center bg-gray-200 py-6 px-2 text-Adark dark:text-Adark'>
-        <RxAvatar className='text-6xl' />
+        <RxAvatar className='rounded-full bg-Agray-500 text-6xl text-Awhite' />
         <div className='flex gap-2 divide-Adark'>
           <button>Sign in</button>
           <button> Sign UP</button>
@@ -78,7 +78,9 @@ const MobileMenu = () => {
           return (
             <Link key={uid()} href={link}>
               <div className='flex items-center gap-2'>
-                <IconContext.Provider value={{ className: 'text-4xl' }}>
+                <IconContext.Provider
+                  value={{ className: 'text-4xl text-Agray-500' }}
+                >
                   {icon}
                 </IconContext.Provider>
                 {name}
