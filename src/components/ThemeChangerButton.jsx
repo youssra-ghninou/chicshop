@@ -2,6 +2,9 @@
 
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { IconContext } from 'react-icons'
+import { BsSun } from 'react-icons/bs'
+import { MdDarkMode } from 'react-icons/md'
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
@@ -17,11 +20,23 @@ const ThemeSwitch = () => {
   }
 
   return (
-    <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-      <option value='system'>System</option>
-      <option value='dark'>Dark</option>
-      <option value='light'>Light</option>
-    </select>
+    <div className='h-fit w-fit'>
+      {theme === 'light' ? (
+        <button onClick={() => setTheme('dark')} className=''>
+          <div value='dark' className=''>
+            <IconContext.Provider value={{ className: 'text-4xl' }}>
+              <MdDarkMode />
+            </IconContext.Provider>
+          </div>
+        </button>
+      ) : (
+        <button onClick={() => setTheme('light')} className=''>
+          <IconContext.Provider value={{ className: 'text-4xl' }}>
+            <BsSun />
+          </IconContext.Provider>
+        </button>
+      )}
+    </div>
   )
 }
 

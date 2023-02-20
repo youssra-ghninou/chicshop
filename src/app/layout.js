@@ -1,6 +1,5 @@
-import Menu from '@/components/Menu'
 import Providers from '@/components/Providers'
-import ThemeSwitch from '@/components/ThemeChangerButton'
+import Sidebar from '@/components/Sidebar'
 import { Inter } from '@next/font/google'
 import { ServerThemeProvider } from 'next-themes'
 import './globals.css'
@@ -23,8 +22,7 @@ export default function RootLayout({ children }) {
         <head />
         <body>
           <Providers>
-            <Menu />
-            <ThemeSwitch />
+            <Sidebar />
             {children}
           </Providers>
         </body>
