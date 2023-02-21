@@ -16,7 +16,7 @@ const Sidebar = () => {
         </button>
       ) : (
         <button
-          className='fixed left-0 top-0 z-50 flex cursor-pointer items-center text-3xl text-Adark'
+          className='fixed left-0 top-0 z-50 flex cursor-pointer items-center text-3xl text-Adark dark:text-Awhite'
           onClick={() => setShowSidebar(!showSidebar)}
         >
           <AiOutlineMenu />
