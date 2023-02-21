@@ -15,13 +15,12 @@ const MobleTopMenu = () => {
       <div className='flex items-center justify-between'>
         <div className='flex items-center gap-2'>
           <Sidebar />
-          <Link
-            href='/category'
-            className='rounded-md bg-Alogo p-2 text-Awhite'
-          >
-            <BsBag />
+          <Link href='/category' className='flex items-center gap-2'>
+            <span className='rounded-md bg-Alogo p-2 text-Awhite'>
+              <BsBag />
+            </span>
+            <h1 className='text-lg font-extrabold text-Abrand'>Chic Shop</h1>
           </Link>
-          <h1 className='text-lg font-extrabold text-Abrand'>Chic Shop</h1>
         </div>
         <div className='hidden md:block md:w-3/6'>
           <DesktopSearchBar />
