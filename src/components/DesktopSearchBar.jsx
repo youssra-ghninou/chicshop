@@ -1,25 +1,33 @@
+'use client'
+
+import { BsArrowDownShort } from 'react-icons/bs'
+
 const DesktopSearchBar = () => {
   return (
-    <div className='relative mx-auto pt-2 text-gray-600'>
+    <form className='flex w-full justify-center'>
       <input
-        className='h-10 w-full rounded border-2 border-Agray-300 bg-Agray-100 px-5 text-sm focus:outline-none'
         type='search'
-        name='search'
+        className='z-20 rounded-l-lg border-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:border-l-gray-600  dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500'
         placeholder='Search'
+        required
       />
-      <button type='submit' className='absolute right-0 top-0 mt-5 mr-4'>
-        <svg
-          className='h-4 w-4 fill-current text-gray-600'
-          x='0px'
-          y='0px'
-          viewBox='0 0 56.966 56.966'
-          width='512px'
-          height='512px'
-        >
-          <path d='M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z' />
-        </svg>
+      <button
+        className='flex items-center gap-2 border-y-2 border-gray-300 bg-gray-100 py-2.5 px-4 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700'
+        type='button'
+      >
+        <p>Categories</p>
+        <span className='text-lg'>
+          <BsArrowDownShort />
+        </span>
       </button>
-    </div>
+      <button
+        type='submit'
+        className='rounded-r-lg border border-blue-700 bg-blue-700 p-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+      >
+        Search
+        <span className='sr-only'>Search</span>
+      </button>
+    </form>
   )
 }
 

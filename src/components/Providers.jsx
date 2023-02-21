@@ -1,4 +1,5 @@
 'use client'
+
 import { ThemeProvider } from 'next-themes'
 
 // * Because layout.tsx is only rendered on the server-side, we can use the

@@ -1,31 +1,55 @@
+'use client'
+
 import Link from 'next/link'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
-import { BsBag } from 'react-icons/bs'
-import { CgProfile } from 'react-icons/cg'
+import { BsBag, BsFillPersonFill } from 'react-icons/bs'
+import { FaShoppingCart } from 'react-icons/fa'
+import { MdFavorite } from 'react-icons/md'
+import { RiMessage2Fill } from 'react-icons/ri'
 import DesktopSearchBar from './DesktopSearchBar'
 import MobileSearchBar from './MobileSearchBar'
 import Sidebar from './MobileSidebar'
 
 const MobleTopMenu = () => {
   return (
-    <main className='p-2'>
+    <main className='flex flex-col p-2'>
       <div className='flex items-center justify-between'>
         <div className='flex items-center gap-2'>
           <Sidebar />
-          <Link href='/' className='rounded-md bg-Alogo p-2 text-Awhite'>
+          <Link
+            href='/category'
+            className='rounded-md bg-Alogo p-2 text-Awhite'
+          >
             <BsBag />
           </Link>
           <h1 className='text-lg font-extrabold text-Abrand'>Chic Shop</h1>
         </div>
-        <div className='hidden w-4/6 md:block'>
+        <div className='hidden md:block md:w-3/6'>
           <DesktopSearchBar />
         </div>
-        <div className='flex gap-4'>
-          <div className='text-2xl'>
-            <AiOutlineShoppingCart />
+        <div className='flex gap-4 text-Agray-500'>
+          <div className='flex flex-col items-center'>
+            <div className='text-3xl'>
+              <BsFillPersonFill />
+            </div>
+            <p className='text-lg'>Profile</p>
           </div>
-          <div className='text-2xl'>
-            <CgProfile />
+          <div className='hidden flex-col items-center lg:flex'>
+            <div className='text-3xl'>
+              <RiMessage2Fill />
+            </div>
+            <p className='text-lg'>Message</p>
+          </div>
+          <div className='hidden flex-col items-center lg:flex'>
+            <div className='text-3xl'>
+              <MdFavorite />
+            </div>
+            <p className='text-lg'>Orders</p>
+          </div>
+          <div className='flex flex-col items-center text-2xl'>
+            <div className='text-3xl'>
+              <FaShoppingCart />
+            </div>
+            <p className='text-lg'>My cart</p>
           </div>
         </div>
       </div>

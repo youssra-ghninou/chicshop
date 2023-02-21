@@ -1,3 +1,5 @@
+'use client'
+
 const MobileSearchBar = () => {
   return (
     <div className='relative mx-auto pt-2 text-gray-600'>

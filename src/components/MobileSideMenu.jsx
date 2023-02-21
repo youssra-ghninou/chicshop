@@ -1,11 +1,11 @@
-/* eslint-disable no-unused-vars */
 'use client'
+
 import Link from 'next/link'
 import { IconContext } from 'react-icons'
 import { AiOutlineHome, AiOutlineShopping } from 'react-icons/ai'
 import { BiBuildings } from 'react-icons/bi'
 import { BsHeadset } from 'react-icons/bs'
-import { MdOutlineCategory } from 'react-icons/md'
+import { MdOutlineCategory, MdOutlineFavoriteBorder } from 'react-icons/md'
 import { RxAvatar } from 'react-icons/rx'
 import { TbWorld } from 'react-icons/tb'
 import { uid } from 'uid'
@@ -26,7 +26,7 @@ const MobileSideMenu = () => {
     {
       name: 'Favorites',
       link: '/category',
-      icon: <AiOutlineHome />,
+      icon: <MdOutlineFavoriteBorder />,
     },
     {
       name: 'My orders',
