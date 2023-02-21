@@ -1,3 +1,4 @@
+import MobileTopMenu from '@/components/MobileTopMenu'
 import Providers from '@/components/Providers'
 import { Inter } from '@next/font/google'
 import { ServerThemeProvider } from 'next-themes'
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       */}
         <head />
         <body>
+          <MobileTopMenu />
           <Providers>{children}</Providers>
         </body>
       </html>

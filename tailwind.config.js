@@ -15,6 +15,8 @@ module.exports = {
         Awhite: '#FFFFFF',
         Adark: '#1C1C1C',
         Aprimary: '#0D6EFD',
+        Alogo: '#0D6EFD',
+        Abrand: '#8CB7F5',
         Agreen: '#00B517',
         Aorange: '#FF9017',
         Ared: '#FA3434',

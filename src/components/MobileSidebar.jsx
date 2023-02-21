@@ -9,14 +9,14 @@ const Sidebar = () => {
     <div className='lg:hidden'>
       {showSidebar ? (
         <button
-          className='fixed left-0 top-0 z-50 flex cursor-pointer items-center text-3xl text-Adark'
+          className='fixed left-0 top-0 z-50 flex cursor-pointer items-center text-2xl text-Adark'
           onClick={() => setShowSidebar(!showSidebar)}
         >
           <AiOutlineClose />
         </button>
       ) : (
         <button
-          className='fixed left-0 top-0 z-50 flex cursor-pointer items-center text-3xl text-Adark dark:text-Awhite'
+          className='left-0 top-0 z-50 flex cursor-pointer items-center text-2xl text-Adark duration-200 ease-in-out dark:text-Awhite'
           onClick={() => setShowSidebar(!showSidebar)}
         >
           <AiOutlineMenu />

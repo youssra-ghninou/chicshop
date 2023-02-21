@@ -1,4 +1,4 @@
-import GoBack from '@/components/GoBack'
+import GoBack from '@/components/MobileGoBackButton'
 
 export default function Products() {
   return (
