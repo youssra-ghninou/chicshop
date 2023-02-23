@@ -9,7 +9,7 @@ import { MdOutlineCategory, MdOutlineFavoriteBorder } from 'react-icons/md'
 import { RxAvatar } from 'react-icons/rx'
 import { TbWorld } from 'react-icons/tb'
 import { uid } from 'uid'
-import ThemeSwitch from './ThemeChangerButton'
+import ThemeSwitch from '../ThemeChangerButton'
 
 const MobileSideMenu = () => {
   const navitems = [
@@ -79,7 +79,7 @@ const MobileSideMenu = () => {
             <Link key={uid()} href={link}>
               <div className='flex items-center gap-2'>
                 <IconContext.Provider
-                  value={{ className: 'text-4xl text-Agray-500' }}
+                  value={{ className: 'text-xl text-Agray-500' }}
                 >
                   {icon}
                 </IconContext.Provider>

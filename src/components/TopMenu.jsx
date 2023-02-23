@@ -5,9 +5,9 @@ import { BsBag, BsFillPersonFill } from 'react-icons/bs'
 import { FaShoppingCart } from 'react-icons/fa'
 import { MdFavorite } from 'react-icons/md'
 import { RiMessage2Fill } from 'react-icons/ri'
-import DesktopSearchBar from './DesktopSearchBar'
-import MobileSearchBar from './MobileSearchBar'
-import Sidebar from './MobileSidebar'
+import DesktopSearchBar from './desktop/DesktopSearchBar'
+import MobileSearchBar from './mobile/MobileSearchBar'
+import Sidebar from './mobile/MobileSidebar'
 
 const MobleTopMenu = () => {
   return (
@@ -27,25 +27,25 @@ const MobleTopMenu = () => {
         </div>
         <div className='flex gap-4 text-Agray-500'>
           <div className='flex flex-col items-center'>
-            <div className='text-3xl'>
+            <div className='text-xl'>
               <BsFillPersonFill />
             </div>
             <p className='text-lg'>Profile</p>
           </div>
           <div className='hidden flex-col items-center lg:flex'>
-            <div className='text-3xl'>
+            <div className='text-xl'>
               <RiMessage2Fill />
             </div>
             <p className='text-lg'>Message</p>
           </div>
           <div className='hidden flex-col items-center lg:flex'>
-            <div className='text-3xl'>
+            <div className='text-xl'>
               <MdFavorite />
             </div>
             <p className='text-lg'>Orders</p>
           </div>
           <div className='flex flex-col items-center text-2xl'>
-            <div className='text-3xl'>
+            <div className='text-xl'>
               <FaShoppingCart />
             </div>
             <p className='text-lg'>My cart</p>

@@ -1,5 +1,5 @@
-import MobileTopMenu from '@/components/MobileTopMenu'
 import Providers from '@/components/Providers'
+import MobileTopMenu from '@/components/TopMenu'
 import { Inter } from '@next/font/google'
 import { ServerThemeProvider } from 'next-themes'
 import './globals.css'
