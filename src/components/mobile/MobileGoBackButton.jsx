@@ -1,9 +1,9 @@
 'use client'
 import { useRouter } from 'next/navigation'
 import { BiArrowBack } from 'react-icons/bi'
-import { Button } from './Button'
+import { Button } from '../Button'
 
-const GoBack = () => {
+const MobileGoBackButton = () => {
   const router = useRouter()
   return (
     <div className='flex flex-col gap-2'>
@@ -23,8 +23,14 @@ const GoBack = () => {
       <Button intent='primary' href='/primary'>
         <BiArrowBack className='text-xl' /> Primry button
       </Button>
+      <Button intent='danger' href='/primary'>
+        <BiArrowBack className='text-xl' /> Danger button
+      </Button>
+      <Button intent='success' href='/primary'>
+        <BiArrowBack className='text-xl' /> success button
+      </Button>
     </div>
   )
 }
 
-export default GoBack
+export default MobileGoBackButton

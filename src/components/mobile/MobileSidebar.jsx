@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import MobileSideMenu from './MobileSideMenu'
 
-const Sidebar = () => {
+const MobileSidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false)
   return (
     <div className='lg:hidden'>
@@ -34,4 +34,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default MobileSidebar
