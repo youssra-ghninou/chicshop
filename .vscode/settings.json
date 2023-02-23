@@ -10,11 +10,28 @@
     "source.fixAll.eslint": true,
     "source.fixAll.format": true
   },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
   "eslint.workingDirectories": [{ "mode": "auto" }],
   "files.encoding": "utf8",
   "cSpell.language": "en,lorem",
   "cSpell.enableFiletypes": ["dotenv", "log", "tailwindcss"],
-  "cSpell.words": ["allroadmaps", "commitlint", "haspopup", "tailwindcss"],
+  "cSpell.words": [
+    "Adark",
+    "Agray",
+    "Agreen",
+    "allroadmaps",
+    "Aorange",
+    "Aprimary",
+    "Ared",
+    "Awhite",
+    "Chicshop",
+    "commitlint",
+    "haspopup",
+    "navitems",
+    "tailwindcss"
+  ],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
