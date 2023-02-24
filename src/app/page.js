@@ -1,19 +1,12 @@
-import { getAllProducts } from 'context/getAllProducts'
+import { getAllProducts } from '../../utils/shopify'
 
-export default function Home({ products }) {
+export default async function Home() {
+  const products = await getAllProducts()
   return (
     <main className='font-bold'>
-      Home page{products}
+      Home page
+      {JSON.stringify(products)}
       {console.log(products)}
     </main>
   )
-}
-
-export const getStaticProps = async (context) => {
-  const products = await getAllProducts()
-  return {
-    props: {
-      products: JSON.parse(JSON.stringify(products)),
-    },
-  }
 }
