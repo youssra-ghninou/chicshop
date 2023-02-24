@@ -24,7 +24,7 @@ export async function getAllProducts() {
   const gql = String.raw
   const query = gql`
     {
-      products(first: 25) {
+      products(first: 1) {
         edges {
           node {
             id
@@ -53,4 +53,30 @@ export async function getAllProducts() {
     ? response.data.products.edges
     : []
   return allProducts
+}
+export async function getAllCollections() {
+  const gql = String.raw
+  const query = gql`
+    query getCollections {
+      collections(first: 10) {
+        edges {
+          cursor
+          node {
+            id
+            handle
+            title
+          }
+        }
+        pageInfo {
+          hasNextPage
+          hasPreviousPage
+        }
+      }
+    }
+  `
+  const response = await ShopifyData(query)
+  const allCollections = response.data.collections.edges
+    ? response.data.collections.edges
+    : []
+  return allCollections
 }
