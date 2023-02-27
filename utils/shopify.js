@@ -60,16 +60,9 @@ export async function getAllCollections() {
     query getCollections {
       collections(first: 10) {
         edges {
-          cursor
           node {
-            id
             handle
-            title
           }
-        }
-        pageInfo {
-          hasNextPage
-          hasPreviousPage
         }
       }
     }
