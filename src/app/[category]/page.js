@@ -28,7 +28,7 @@ export async function generateStaticParams() {
       }
     `,
   )
-  return collectionsAll
+  return collectionsAll.data.collections.edges
     ? collectionsAll.data.collections.edges.map(({ node }) => ({
         category: node.handle,
       }))
