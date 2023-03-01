@@ -1,15 +1,36 @@
-import { uid } from 'uid'
-import { getAllCollections } from 'utils/shopify'
+import { ShopifyData } from 'utils/shopify'
 
-export default async function Products() {
+export default async function Products(category) {
   // const products = await getAllProducts()
-  const collections = await getAllCollections()
+  console.log(category)
   return (
     <main className='font-bold'>
-      {/* {JSON.stringify(products)} */}
-      {collections.map(({ node }) => {
+      {JSON.stringify(category)}
+      {/* {collections.map(({ node }) => {
         return <div key={uid()}>{node.handle}</div>
-      })}
+      })} */}
     </main>
   )
+}
+
+export async function generateStaticParams() {
+  const gql = String.raw
+  const collectionsAll = await ShopifyData(
+    gql`
+      query getCollections {
+        collections(first: 10) {
+          edges {
+            node {
+              handle
+            }
+          }
+        }
+      }
+    `,
+  )
+  return collectionsAll
+    ? collectionsAll.data.collections.edges.map(({ node }) => ({
+        category: node.handle,
+      }))
+    : []
 }

@@ -1,4 +1,4 @@
-async function ShopifyData(query) {
+export async function ShopifyData(query) {
   const URL = `https://${process.env.NEXT_PUBLIC_API_URL}/api/2023-01/graphql.json`
   const options = {
     endpoint: URL,
