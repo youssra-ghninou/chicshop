@@ -5,7 +5,7 @@ export default async function Products(category) {
   console.log(category)
   return (
     <main className='font-bold'>
-      {JSON.stringify(category)}
+      {/* {JSON.stringify(products)} */}
       {/* {collections.map(({ node }) => {
         return <div key={uid()}>{node.handle}</div>
       })} */}
@@ -28,7 +28,7 @@ export async function generateStaticParams() {
       }
     `,
   )
-  return collectionsAll.data.collections.edges
+  return collectionsAll
     ? collectionsAll.data.collections.edges.map(({ node }) => ({
         category: node.handle,
       }))

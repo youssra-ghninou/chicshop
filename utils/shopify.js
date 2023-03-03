@@ -24,7 +24,7 @@ export async function getAllProducts() {
   const gql = String.raw
   const query = gql`
     {
-      products(first: 1) {
+      products(first: 9) {
         edges {
           node {
             id
@@ -35,10 +35,9 @@ export async function getAllProducts() {
                 amount
               }
             }
-            images(first: 5) {
+            images(first: 9) {
               edges {
                 node {
-                  originalSrc
                   altText
                 }
               }
@@ -54,6 +53,87 @@ export async function getAllProducts() {
     : []
   return allProducts
 }
+export async function getAllProductsInHydrogen() {
+  const gql = String.raw
+  const query = gql`
+    query getProductsInCollection {
+      collection(handle: "hydrogen") {
+        title
+        products(first: 50, sortKey: BEST_SELLING) {
+          edges {
+            node {
+              id
+              title
+              availableForSale
+              images(first: 1) {
+                edges {
+                  node {
+                    url
+                    width
+                    height
+                    altText
+                  }
+                }
+              }
+              priceRange {
+                minVariantPrice {
+                  amount
+                  currencyCode
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `
+  const response = await ShopifyData(query)
+  const allProductsInHydrogen = response.data.collection.products.edges
+    ? response.data.collection.products.edges
+    : []
+  return allProductsInHydrogen
+}
+export async function getAllProductsInFrontPage() {
+  const gql = String.raw
+  const query = gql`
+    query getProductsInCollection {
+      collection(handle: "frontpage") {
+        title
+        products(first: 50, sortKey: BEST_SELLING) {
+          edges {
+            node {
+              id
+              title
+              availableForSale
+              images(first: 1) {
+                edges {
+                  node {
+                    url
+                    width
+                    height
+                    altText
+                  }
+                }
+              }
+              priceRange {
+                minVariantPrice {
+                  amount
+                  currencyCode
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `
+  const response = await ShopifyData(query)
+  const allProductsInFrontpage = response.data.collection.products.edges
+    ? response.data.collection.products.edges
+    : []
+  return allProductsInFrontpage
+}
+
 export async function getAllCollections() {
   const gql = String.raw
   const query = gql`
