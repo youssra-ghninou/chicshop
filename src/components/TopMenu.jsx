@@ -9,13 +9,13 @@ import DesktopSearchBar from './desktop/DesktopSearchBar'
 import MobileSearchBar from './mobile/MobileSearchBar'
 import Sidebar from './mobile/MobileSidebar'
 
-const MobleTopMenu = () => {
+const MobileTopMenu = () => {
   return (
     <main className='flex flex-col p-2'>
       <div className='flex items-center justify-between'>
         <div className='flex items-center gap-2'>
           <Sidebar />
-          <Link href='/category' className='flex items-center gap-2'>
+          <Link href='/' className='flex items-center gap-2'>
             <span className='rounded-md bg-Alogo p-2 text-Awhite'>
               <BsBag />
             </span>
@@ -59,4 +59,4 @@ const MobleTopMenu = () => {
   )
 }
 
-export default MobleTopMenu
+export default MobileTopMenu

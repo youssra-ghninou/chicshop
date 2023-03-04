@@ -9,7 +9,7 @@ const inter = Inter({
   display: 'swap',
   subsets: ['latin'],
 })
-
+export const dynamicParams = false // true | false,
 export default function RootLayout({ children }) {
   return (
     // the use of </ServerThemeProvider> resolve the hydration error
