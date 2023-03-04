@@ -20,6 +20,7 @@ module.exports = {
         Agreen: '#00B517',
         Aorange: '#FF9017',
         Ared: '#FA3434',
+        Abadge: '#FFE3E3',
         Agray: {
           100: '#F7FAFC',
           200: '#EFF2F4',
