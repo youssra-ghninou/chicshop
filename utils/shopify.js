@@ -20,6 +20,7 @@ export async function ShopifyData(query) {
     throw new Error('Products not fetched')
   }
 }
+
 export async function getAllProducts() {
   const gql = String.raw
   const query = gql`
@@ -53,6 +54,7 @@ export async function getAllProducts() {
     : []
   return allProducts
 }
+
 export async function getAllProductsInHydrogen() {
   const gql = String.raw
   const query = gql`
@@ -93,6 +95,48 @@ export async function getAllProductsInHydrogen() {
     : []
   return allProductsInHydrogen
 }
+
+export async function getAllProductsInAutomatedCollection() {
+  const gql = String.raw
+  const query = gql`
+    query getProductsInCollection {
+      collection(handle: "automated-collection") {
+        title
+        products(first: 50, sortKey: BEST_SELLING) {
+          edges {
+            node {
+              id
+              title
+              availableForSale
+              images(first: 1) {
+                edges {
+                  node {
+                    url
+                    width
+                    height
+                    altText
+                  }
+                }
+              }
+              priceRange {
+                minVariantPrice {
+                  amount
+                  currencyCode
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `
+  const response = await ShopifyData(query)
+  const allProductsInHydrogen = response.data.collection.products.edges
+    ? response.data.collection.products.edges
+    : []
+  return allProductsInHydrogen
+}
+
 export async function getAllProductsInFrontPage() {
   const gql = String.raw
   const query = gql`

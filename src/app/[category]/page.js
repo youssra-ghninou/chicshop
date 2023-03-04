@@ -2,7 +2,7 @@ import { ShopifyData } from 'utils/shopify'
 
 export default async function Products(category) {
   // const products = await getAllProducts()
-  console.log(category)
+  // console.log(category)
   return (
     <main className='font-bold'>
       {/* {JSON.stringify(products)} */}
